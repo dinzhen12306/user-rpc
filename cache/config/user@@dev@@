@@ -1,0 +1,19 @@
+{
+    "Mysql":{
+        "DriverName": "mysql",
+        "Username": "root",
+        "Password": "123456",
+        "ConnectionType" : "tcp",
+        "Host": "localhost",
+        "Port": "3306",
+        "DatabaseName": "week2",
+        "ConnectionParameters": "charset=utf8mb4"
+    },
+    "Redis":{
+        "Host": "localhost",
+        "Port": "6379"
+    },
+    "Token":{
+        "SecretKey":"123456"
+    }
+}

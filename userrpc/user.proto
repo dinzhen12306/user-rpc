@@ -1,0 +1,54 @@
+syntax = "proto3";
+option go_package = ".;userrpc";
+package stream;
+import "google/protobuf/wrappers.proto";
+
+service StreamGreeter {
+  rpc AccordingToConditionGet(AccordingToConditionGetReq) returns (AccordingToConditionGetResp);//根据条件获取单条用户信息
+  rpc AccordingToConditionGets(AccordingToConditionGetsReq) returns (AccordingToConditionGetsResp);//根据条件获取多条用户信息
+  rpc InsertUser(InsertUserReq) returns (InsertUserResp);//添加用户
+  rpc UpdateUser(UpdateUserReq) returns (UpdateUserResp);//修改用户信息
+  rpc DeletedUser(DeletedUserReq) returns (DeletedUserResp);//删除用户
+}
+
+message AccordingToConditionGetReq{
+  map<string,google.protobuf.StringValue> condition =1;
+}
+message AccordingToConditionGetResp{
+  User data =1;
+}
+
+message AccordingToConditionGetsReq{
+  map<string,google.protobuf.StringValue> condition =1;
+}
+message AccordingToConditionGetsResp{
+  repeated User data =1;
+}
+
+message InsertUserReq{
+  User data =1;
+}
+message InsertUserResp{
+  int64 userId =1;
+}
+
+message UpdateUserReq{
+  User data =1;
+}
+message UpdateUserResp{
+  int64 status =1;
+}
+
+message DeletedUserReq{
+  int64 userId =1;
+}
+message DeletedUserResp{
+  int64 status =1;
+}
+message User {
+  int64 Id =1;
+  string Username =2;
+  string Password =3;
+  string Phone =4;
+  string Email =5;
+}
