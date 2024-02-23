@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
 	"time"
-	"zg5/day1/rpc/userrpc/config"
+	"userrpc/config"
 )
 
 // @secretKey: JWT 加解密密钥

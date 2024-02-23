@@ -3,8 +3,8 @@ package userclient
 import (
 	"context"
 	"strconv"
-	"zg5/day1/rpc/userrpc/model/mysql"
-	pb "zg5/day1/rpc/userrpc/userrpc"
+	"userrpc/model/mysql"
+	pb "userrpc/userrpc"
 )
 
 type UserRpcClient struct {

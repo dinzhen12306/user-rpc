@@ -4,8 +4,8 @@ import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
+	"userrpc/config"
 	"xorm.io/xorm"
-	"zg5/day1/rpc/userrpc/config"
 )
 
 var (

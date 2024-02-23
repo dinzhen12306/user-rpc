@@ -4,10 +4,10 @@ import (
 	"google.golang.org/grpc"
 	"log"
 	"net"
-	_ "zg5/day1/rpc/userrpc/config"
-	_ "zg5/day1/rpc/userrpc/model/mysql"
-	"zg5/day1/rpc/userrpc/userclient"
-	pb "zg5/day1/rpc/userrpc/userrpc"
+	_ "userrpc/config"
+	_ "userrpc/model/mysql"
+	"userrpc/userclient"
+	pb "userrpc/userrpc"
 )
 
 func main() {
